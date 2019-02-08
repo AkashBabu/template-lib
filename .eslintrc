@@ -80,7 +80,10 @@
             {
                 "max": 5
             }
-        ]
+        ],
+        "object-property-newline": [2, {
+            "allowAllPropertiesOnSameLine": false
+        }]
     },
     "env": {
         "node": true,
