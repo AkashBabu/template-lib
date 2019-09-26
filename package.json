@@ -4,12 +4,12 @@
     "description": "Template for Nodejs libraries",
     "main": "dist/index.js",
     "scripts": {
-        "_test": "mocha --require babel-core/register --require babel-polyfill test/**/*.test.js",
+        "_test": "mocha --require babel-core/register --require babel-polyfill test/**/*.js",
         "_test:exit": "npm run _test -- --exit",
-        "test": "export NODE_ENV=test && npm run _test:exit",
-        "test:dev": "export NODE_ENV=test &&  npm run _test -- -w",
-        "test:grep": "export NODE_ENV=test &&  npm run _test -- -g ",
-        "coverage": "export NODE_ENV=test && nyc -- npm run _test:exit",
+        "test": "cross-env NODE_ENV=test npm run _test:exit",
+        "test:dev": "cross-env NODE_ENV=test npm run _test -- -w",
+        "test:grep": "cross-env NODE_ENV=test npm run _test -- -g ",
+        "coverage": "cross-env NODE_ENV=test nyc -- npm run _test:exit",
         "build": "rimraf dist/ && babel src --out-dir dist",
         "lint": "eslint --config .eslintrc src/index.js",
         "benchmark": "radargun benchmark/**/*.bench.js",
@@ -19,7 +19,6 @@
         "type": "git",
         "url": "git+https://github.com/AkashBabu/template-lib.git"
     },
-    "keywords": [],
     "author": "001akashbabu@gmail.com",
     "license": "MIT",
     "bugs": {
@@ -41,6 +40,7 @@
         "babel-preset-env": "^1.7.0",
         "babel-watch": "^2.0.7",
         "chai": "^4.1.2",
+        "cross-env": "^6.0.0",
         "eslint": "^3.19.0",
         "eslint-config-airbnb": "^14.1.0",
         "eslint-plugin-class-property": "^1.0.6",
