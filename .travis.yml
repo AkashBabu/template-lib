@@ -5,6 +5,8 @@ node_js:
   - 8
   - 9
   - 10
+  - 11
+  - 12
 
 branches:
   only:
@@ -13,6 +15,7 @@ branches:
 matrix:
   allow_failures:
     - node_js: 7
+    - node_js: 11
 
 install:
   - npm install
