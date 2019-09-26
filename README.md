@@ -7,25 +7,14 @@ This package includes the following:
 - Mocha & chai
 - Coverage Report (nyc)
 
+## Usage
+> git pull git@github.com:AkashBabu/template-lib.git
+> npm install
+> npm link
+> yo template-lib
+
 ## Installation
 > npm i lib -S
 
-## ES-Lint
-> npm run lint
-
-## Babel
-> npm run build  
-
-This command removes dist/ folder and builds it from the contents in src/ folder
-
-## Mocha & Chai (Testing)
-> npm run test
-
-## Coverage Report
-> npm run coverage
-
-## Benchmark
-> npm run benchmark
-
 ## Contributions
-This is open-source, which makes it obvious for any PRs, but I would request you to add necessary test-cases for the same 
+Issues, PRs and feature-requests, All are welcome!!!
