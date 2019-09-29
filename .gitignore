@@ -66,3 +66,9 @@ package-lock.json
 # VSCode 
 sample.launch.json
 .vscode/
+
+# build files
+dist/
+
+.DS_Store
+
